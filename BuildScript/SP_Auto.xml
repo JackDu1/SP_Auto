@@ -1,0 +1,219 @@
+<project name="AutomationTesting" basedir="." default="RunAutomation"
+	xmlns:props="antlib:org.apache.ant.props">
+
+	<propertyhelper>
+		<props:nested />
+	</propertyhelper>
+
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties" />
+	<taskdef resource="net/sf/antcontrib/antlib.xml" />
+
+	<property file="./SP_Auto.Properties"/>
+	<property file="C:\sp_workspace\testComplete\Version.Properties"/>
+	<property environment="JenkinsEnv" />
+	<property environment="env" />
+
+	<!-- ===================Main Target================== -->
+	<target name="RunAutomation">
+	
+		<sequential>
+			<antcallback target="InitJenkinsServerJobWorkSpace" return="TimeLogging"/>
+			<antcall target="PrepareEnv"/>
+			<antcall target="SelectGroupforUserDefinedAxis"/>
+			<antcall target="InstallSpaceManagerClient"/>
+			<touch file="C:/Runfinished.txt"/>
+		</sequential>
+		
+		<if>
+			<equals arg1="${VBRunResultCode}" arg2="400"/>
+			<then>
+				<antcall target="GetLicenseStatus"/>
+			</then>
+		</if>
+		<!--<antcall target="ProcessTestCasesResults" />-->
+	</target>
+
+	<!-- ================================================ -->
+	<target name="InitJenkinsServerJobWorkSpace">
+		<tstamp>
+			<format property="TimeLogging" pattern="MM-dd-yyyy_HH-mm-ss"
+				locale="en" />
+		</tstamp>
+
+		<tstamp>
+			<format property="CopyrightYear" pattern="yyyy" locale="en" />
+		</tstamp>
+
+		<tstamp>
+			<format property="BuildStartTime" pattern="MM/dd/yyyy HH:mm:ss"
+				locale="en" />
+		</tstamp>
+
+	</target>
+
+	<!-- ================================================ -->
+	<target name="CopySuiteInstallerToTestVM">
+		<echo message="FileServer.Build.Dir   	: ${FileServer.Build.Dir}${VersionNumber}\${SuiteName}"/>
+		<echo message="FileServer.Build.Name  	: ${FileServer.Build.Name}"/>
+		<echo message="FileServer.Build.Number  : ${VersionNumber}"/>
+		<echo message="Product Build in Local 	: ${TestVM.SuiteInstaller.dir}"/>
+		
+		<condition property="file.exists" else="false">
+			<available file="${FileServer.Build.Dir}${VersionNumber}\${SuiteName}\${FileServer.Build.Name}"/>
+		</condition>
+		<echo message="If file existed in FileServer?:${file.exists}"/>
+		
+		<copy file="${FileServer.Build.Dir}${VersionNumber}\${SuiteName}\${FileServer.Build.Name}" todir="${TestVM.SuiteInstaller.dir}"  overwrite="true" failonerror="false"/>
+		
+		<echo message="Checking the build copy process if successed"/>
+		<if>
+			<available file="${TestVM.SuiteInstaller.dir}\${FileServer.Build.Name}"/>
+			<then>
+				<property name="file.exists" value="true"/>
+				<echo message="Copy Suite Installer to local successfull!"/>
+			</then>
+			<else>
+				<fail message="Copy Suite Installer to local failure!"/>
+			</else>
+		</if>
+	</target>
+	
+	<!-- ================================================ -->
+	<target name="PrepareEnv">
+	<!-- loop to install software according to parameters -->
+		<for list="${Need_Components}" delimiter="," param="Component">
+			<sequential>
+				<antcall target="@{Component}"/>
+			</sequential>
+		</for>
+	</target>
+	
+	<!-- ================================================ -->
+	<target name="GetLicenseStatus">
+		<property name="licenseStatusURL" value="http://10.1.145.11:1947/_int_/features.html"/>
+		<property name="licenseSessionURL" value="http://10.1.145.11:1947/_int_/sessions.html?haspid=266647369897&amp;featureid=1031"/>
+		<property name="SwarmServiceStatusURL" value="http://jenkins.skytapbuilddb.local:15795/"/>
+		<script language="javascript" src="${TestVM.AntUtilities.dir}/LicenseStatus.js"/>
+	</target>
+	
+	<!-- ================================================ -->
+	<target name="SelectGroupforUserDefinedAxis">
+		
+		<echo
+			message="-----------------Basic information------------------------------" />
+		<echo>The mds file path : ${TestVM.TCScripts.dir}\${Automation.ProjectName}.mds</echo>
+		<echo>ProjectName   	: ${Automation.ProjectName}</echo>
+		<echo message="&quot;${TestVM.AntUtilities.dir}\SelectGroup.vbs&quot; &quot;${TestVM.TCScripts.dir}\${Automation.ProjectName}.mds&quot; &quot;${RunGroups}&quot;"/>
+		
+		<condition property="file.exists" else="false">
+			<available file="${TestVM.TCScripts.dir}\${Automation.ProjectName}.mds"/>
+		</condition>
+		<echo message="Checking the project configuration if exists"/>
+		<if>
+			<available file="${TestVM.TCScripts.dir}\${Automation.ProjectName}.mds"/>
+			<then>
+				<echo message="If the project configuration file exists : ${file.exists}"/>
+			</then>
+			<else>
+				<fail message="If the project configuration file exists? ${file.exists}"/>
+			</else>
+		</if>
+		
+		<property name="scriptfile" location="${TestVM.AntUtilities.dir}\SelectGroup.vbs"/>
+		<exec executable="cscript" failonerror="true" timeout="18000000"
+			outputproperty="VBRunOutput" errorproperty="VBErrorMsg"
+			resultproperty="VBRunResultCode">
+			<arg line="&quot;${scriptfile}&quot; &quot;${TestVM.TCScripts.dir}\${Automation.ProjectName}.mds&quot; &quot;${RunGroups}&quot;" />
+		</exec>
+		<echo message="===================VBRunOutput==========================" />
+		<echo message="${VBRunOutput}" />
+		<echo message="${VBErrorMsg}" />
+		<echo message="VBRunResultCode: ${VBRunResultCode}" />
+		<echo message="===================VBRunOutput==========================" />
+	</target>
+	
+	<!-- ================================================ -->
+	<target name="OracleClient">
+	
+		<echo message="OracleClient.Dir			: ${EnvComponents.dir}\OracleClient"/>
+		
+		<condition property="file.exists" else="false">
+			<available file="${OracleClient.dir}\112040_WIN32_Client.zip"/>
+		</condition>
+		<echo message="The Oracle Client Installer exists in File Server?:${file.exists}"/>
+		
+		<copy todir="C:\Components\OracleClient">
+			<fileset dir="${EnvComponents.dir}\OracleClient\112040_32bit_client.rsp"/>
+		</copy>
+		
+		<condition property="file.exists" else="false">
+			<available file="C:\Components\OracleClient\112040_WIN32_client\client\setup.exe"/>
+		</condition>
+		<echo message="The Oracle Client Installer exists in Local?:${file.exists}"/>
+		
+		<condition property="file.exists" else="false">
+			<available file="C:\Components\OracleClient\112040_32bit_client.rsp"/>
+		</condition>
+		<echo message="The Oracle Client Response File exists in Local?:${file.exists}"/>
+		
+		<exec executable="${TestVM.AntUtilities.dir}/SilentInstallOracleClient.bat"
+					failonerror="true" timeout="3600000" outputproperty="OracleClientOutput" errorproperty="OracleClientErrorMsg"
+			resultproperty="OracleClientResultCode">
+		</exec>
+		<echo message="===================OracleClientOutput==========================" />
+		<echo message="${OracleClientOutput}" />
+		<echo message="${OracleClientErrorMsg}" />
+		<echo message="OracleClientResultCode: ${OracleClientResultCode}" />
+		<echo message="===================OracleClientOutput==========================" />
+		
+	</target>
+	
+	<!-- ================================================ -->
+	<target name="InstallSpaceManagerClient">
+		<echo message="FileServer.Build.Dir		: ${FileServer.Build.Dir}${VersionNumber}"/>
+		<echo message="FileServer.Build.Name	: ${FileServer.Build.Name}"/>
+		<echo message="ProductFamily			: ${ProductFamily}"/>
+		<echo message="Product Build in Local	: ${TestVM.SuiteInstaller.dir}"/>
+		
+		<condition property="file.exists" else="false">
+			<available file="${TestVM.SuiteInstaller.dir}\${FileServer.Build.Name}"/>
+		</condition>
+		<echo message="The Suite Installer in Local:${TestVM.SuiteInstaller.dir}\${FileServer.Build.Name}"/>
+		<echo message="if file existed in Local? : ${file.exists}"/>
+		
+		<property name="SuiteInstaller" location="${TestVM.SuiteInstaller.dir}\${FileServer.Build.Name}"/>
+		<echo message="Start to Launch Suite Installer......" />
+		<exec executable="${SuiteInstaller}" spawn="true"/>	
+		<echo message="Suite Installer have started......" />
+	</target>
+	
+	<!-- ===============Components Begin================= -->
+	<target name="TestExecute">
+	
+		<copy todir="C:/Components/TestExecute">
+			<fileset dir="${EnvComponents.dir}\TestExecute\${TestExecute.dir}"/>
+		</copy>
+		
+		<exec executable="${TestVM.AntUtilities.dir}/SilentInstallTestExecute.bat"
+					failonerror="true" timeout="3600000" outputproperty="TEOutput" errorproperty="TEErrorMsg"
+			resultproperty="TEResultCode">
+		</exec>
+		<echo message="===================TEOutput==========================" />
+		<echo message="${TEOutput}" />
+		<echo message="${TEErrorMsg}" />
+		<echo message="TEResultCode: ${TEResultCode}" />
+		<echo message="===================TEOutput==========================" />
+		<exec executable="${TestVM.AntUtilities.dir}/HASPConfig.bat" 
+					failonerror="true" timeout="3600000" outputproperty="TEConfigOutput" errorproperty="TEConfigErrorMsg"
+			resultproperty="TEConfigResultCode">
+		</exec>
+		<echo message="===================TEConfigOutput==========================" />
+		<echo message="${TEConfigOutput}" />
+		<echo message="${TEConfigErrorMsg}" />
+		<echo message="TEConfigResultCode: ${TEConfigResultCode}" />
+		<echo message="===================TEConfigOutput==========================" />
+	</target>
+	<!-- ================Components End================== -->
+	
+</project>
+
