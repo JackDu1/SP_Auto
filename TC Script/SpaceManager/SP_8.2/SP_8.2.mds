@@ -74,6 +74,9 @@
 			<Node name="script\commonfunction.sd">
 				<Prp name="relpath" type="S" value="Script\CommonFunction.sd"/>
 			</Node>
+			<Node name="script\connection.sd">
+				<Prp name="relpath" type="S" value="Script\Connection.sd"/>
+			</Node>
 			<Node name="script\livereorg.sd">
 				<Prp name="relpath" type="S" value="Script\LiveReorg.sd"/>
 			</Node>
@@ -1052,7 +1055,55 @@
 			<Prp name="settingsversion" type="S" value="9.30"/>
 		</Node>
 		<Node name="test data">
-			<Node name="child list"/>
+			<Node name="child list">
+				<Node name="item0000000000">
+					<Node name="child list">
+						<Node name="item0000000000">
+							<Node name="child list">
+								<Node name="item0000000000">
+									<Node name="child list"/>
+									<Node name="test parameters"/>
+									<Prp name="count" type="I" value="1"/>
+									<Prp name="description" type="S" value=""/>
+									<Prp name="enabled" type="B" value="0"/>
+									<Prp name="group" type="B" value="0"/>
+									<Prp name="index" type="I" value="0"/>
+									<Prp name="key" type="S" value="{2F4F61DB-56DF-4FF8-A4BC-B2859FAD2267}"/>
+									<Prp name="name" type="S" value="W1TestItem"/>
+									<Prp name="stoponerror" type="I" value="2"/>
+									<Prp name="stoponexception" type="I" value="2"/>
+									<Prp name="test moniker" type="S" value="{C07A1FAD-7A11-429A-A1F7-6EC5082DD152}Main"/>
+									<Prp name="timeout" type="I" value="0"/>
+								</Node>
+							</Node>
+							<Node name="test parameters"/>
+							<Prp name="count" type="I" value="1"/>
+							<Prp name="description" type="S" value=""/>
+							<Prp name="enabled" type="B" value="0"/>
+							<Prp name="group" type="B" value="-1"/>
+							<Prp name="index" type="I" value="0"/>
+							<Prp name="key" type="S" value="{68A67D74-203C-496D-AC44-B9C3796B98AC}"/>
+							<Prp name="name" type="S" value="W1 - NormalTable"/>
+							<Prp name="stoponerror" type="I" value="2"/>
+							<Prp name="stoponexception" type="I" value="2"/>
+							<Prp name="test moniker" type="S" value=""/>
+							<Prp name="timeout" type="I" value="0"/>
+						</Node>
+					</Node>
+					<Node name="test parameters"/>
+					<Prp name="count" type="I" value="1"/>
+					<Prp name="description" type="S" value=""/>
+					<Prp name="enabled" type="B" value="0"/>
+					<Prp name="group" type="B" value="-1"/>
+					<Prp name="index" type="I" value="0"/>
+					<Prp name="key" type="S" value="{B131557C-8440-447E-96E5-EC7D8C950A8B}"/>
+					<Prp name="name" type="S" value="W1"/>
+					<Prp name="stoponerror" type="I" value="2"/>
+					<Prp name="stoponexception" type="I" value="2"/>
+					<Prp name="test moniker" type="S" value=""/>
+					<Prp name="timeout" type="I" value="0"/>
+				</Node>
+			</Node>
 			<Prp name="key" type="S" value="{71611BD6-BDED-4FEC-95D5-A8D38AB88CB8}"/>
 		</Node>
 		<Node name="variables">
