@@ -20,7 +20,6 @@
 			<antcallback target="InitJenkinsServerJobWorkSpace" return="TimeLogging"/>
 			<antcall target="PrepareEnv"/>
 			<antcall target="SelectGroupforUserDefinedAxis"/>
-			<antcall target="InstallSpaceManagerClient"/>
 			<touch file="C:/Runfinished.txt"/>
 		</sequential>
 		
@@ -137,22 +136,41 @@
 	
 		<echo message="OracleClient.Dir			: ${EnvComponents.dir}\OracleClient"/>
 		
-		<condition property="file.exists" else="false">
+		<if>
 			<available file="${OracleClient.dir}\112040_WIN32_Client.zip"/>
-		</condition>
-		<echo message="The Oracle Client Zip file exists in File Server?:${file.exists}"/>
+			<then>
+				<echo message="The Oracle Client Zip file exists in File Server? :${file.exists}"/>
+			</then>
+			<else>
+				<echo message="The Oracle Client Zip file exists in File Server? :${file.exists}"/>
+			</else>
+		</if>
 		
-		<copy todir="C:\Components\OracleClient" file="${EnvComponents.dir}\OracleClient\112040_32bit_client.rsp" />
+		<copy todir="C:\Components\OracleClient" file="${OracleClient.dir}\112040_32bit_client.rsp" />
 		
-		<condition property="file.exists" else="false">
-			<available file="C:\Components\OracleClient\112040_WIN32_client\client\setup.exe"/>
-		</condition>
-		<echo message="The Oracle Client Zip File exists in Local?:${file.exists}"/>
+		<if>
+			<condition property="file.exists" else="false">
+				<available file="C:\Components\OracleClient\client\setup.exe"/>
+			</condition>
+			<then>
+				<echo message="The Oracle Client Zip File exists in Local?:${file.exists}"/>
+			</then>
+			<else>
+				<echo message="The Oracle Client Zip File exists in Local?:${file.exists}"/>
+			</else>
+		</if>
 		
-		<condition property="file.exists" else="false">
-			<available file="C:\Components\OracleClient\112040_32bit_client.rsp"/>
-		</condition>
-		<echo message="The Oracle Client Response File exists in Local?:${file.exists}"/>
+		<if>
+			<condition property="file.exists" else="false">
+				<available file="C:\Components\OracleClient\112040_32bit_client.rsp"/>
+			</condition>
+			<then>
+				<echo message="The Oracle Client Response File exists in Local?:${file.exists}"/>
+			</then>
+			<else>
+				<echo message="The Oracle Client Response File exists in Local?:${file.exists}"/>
+			</else>
+		</if>
 		
 		<exec executable="${TestVM.AntUtilities.dir}/SilentInstallOracleClient.bat"
 					failonerror="true" timeout="3600000" outputproperty="OracleClientOutput" errorproperty="OracleClientErrorMsg"
