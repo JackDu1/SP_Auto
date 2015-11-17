@@ -142,9 +142,7 @@
 		</condition>
 		<echo message="The Oracle Client Zip file exists in File Server?:${file.exists}"/>
 		
-		<copy todir="C:\Components\OracleClient">
-			<file="${EnvComponents.dir}\OracleClient\112040_32bit_client.rsp"/>
-		</copy>
+		<copy todir="C:\Components\OracleClient" file="${EnvComponents.dir}\OracleClient\112040_32bit_client.rsp" />
 		
 		<condition property="file.exists" else="false">
 			<available file="C:\Components\OracleClient\112040_WIN32_client\client\setup.exe"/>
