@@ -140,16 +140,16 @@
 		<condition property="file.exists" else="false">
 			<available file="${OracleClient.dir}\112040_WIN32_Client.zip"/>
 		</condition>
-		<echo message="The Oracle Client Installer exists in File Server?:${file.exists}"/>
+		<echo message="The Oracle Client Zip file exists in File Server?:${file.exists}"/>
 		
 		<copy todir="C:\Components\OracleClient">
-			<fileset dir="${EnvComponents.dir}\OracleClient\112040_32bit_client.rsp"/>
+			<file="${EnvComponents.dir}\OracleClient\112040_32bit_client.rsp"/>
 		</copy>
 		
 		<condition property="file.exists" else="false">
 			<available file="C:\Components\OracleClient\112040_WIN32_client\client\setup.exe"/>
 		</condition>
-		<echo message="The Oracle Client Installer exists in Local?:${file.exists}"/>
+		<echo message="The Oracle Client Zip File exists in Local?:${file.exists}"/>
 		
 		<condition property="file.exists" else="false">
 			<available file="C:\Components\OracleClient\112040_32bit_client.rsp"/>
