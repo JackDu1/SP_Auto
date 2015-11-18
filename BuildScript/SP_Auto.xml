@@ -136,6 +136,9 @@
 	
 		<echo message="OracleClient.Dir			: ${EnvComponents.dir}\OracleClient"/>
 		
+		<condition property="file.exists" else="false">
+			<available file="${OracleClient.dir}\112040_WIN32_Client.zip"/>
+		</condition>
 		<if>
 			<available file="${OracleClient.dir}\112040_WIN32_Client.zip"/>
 			<then>
@@ -147,24 +150,28 @@
 		</if>
 		
 		<copy todir="C:\Components\OracleClient" file="${OracleClient.dir}\112040_32bit_client.rsp" />
-		
-		<if>
-			<available file="C:\Components\OracleClient\client\setup.exe"/>
-			<then>
-				<echo message="The Oracle Client Zip File exists in Local?:${file.exists}"/>
-			</then>
-			<else>
-				<echo message="The Oracle Client Zip File exists in Local?:${file.exists}"/>
-			</else>
-		</if>
-		
+		<condition property="file.exists" else="false">
+			<available file="C:\Components\OracleClient\112040_32bit_client.rsp"/>
+		</condition>
 		<if>
 			<available file="C:\Components\OracleClient\112040_32bit_client.rsp"/>
 			<then>
-				<echo message="The Oracle Client Response File exists in Local?:${file.exists}"/>
+				<echo message="The Oracle Client Response File exists in Local?: ${file.exists}"/>
 			</then>
 			<else>
-				<echo message="The Oracle Client Response File exists in Local?:${file.exists}"/>
+				<echo message="The Oracle Client Response File exists in Local?: ${file.exists}"/>
+			</else>
+		</if>
+		<condition property="file.exists" else="false">
+			<available file="C:\Components\OracleClient\client\setup.exe"/>
+		</condition>
+		<if>
+			<available file="C:\Components\OracleClient\client\setup.exe"/>
+			<then>
+				<echo message="The Oracle Client Setup File exists in Local?: ${file.exists}"/>
+			</then>
+			<else>
+				<echo message="The Oracle Client Setup File exists in Local?: ${file.exists}"/>
 			</else>
 		</if>
 		
