@@ -9,7 +9,7 @@
 	<taskdef resource="net/sf/antcontrib/antlib.xml" />
 
 	<property file="./SP_Auto.Properties"/>
-	<property file="C:\sp_workspace\testComplete\Version.Properties"/>
+	<property file="C:\sm_workspace\testComplete\Version.Properties"/>
 	<property environment="JenkinsEnv" />
 	<property environment="env" />
 
