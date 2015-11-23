@@ -49,33 +49,6 @@
 		</tstamp>
 
 	</target>
-
-	<!-- ================================================ -->
-	<target name="CopySuiteInstallerToTestVM">
-		<echo message="FileServer.Build.Dir   	: ${FileServer.Build.Dir}${VersionNumber}\${SuiteName}"/>
-		<echo message="FileServer.Build.Name  	: ${FileServer.Build.Name}"/>
-		<echo message="FileServer.Build.Number  : ${VersionNumber}"/>
-		<echo message="Product Build in Local 	: ${TestVM.SuiteInstaller.dir}"/>
-		
-		<condition property="file.exists" else="false">
-			<available file="${FileServer.Build.Dir}${VersionNumber}\${SuiteName}\${FileServer.Build.Name}"/>
-		</condition>
-		<echo message="If file existed in FileServer?:${file.exists}"/>
-		
-		<copy file="${FileServer.Build.Dir}${VersionNumber}\${SuiteName}\${FileServer.Build.Name}" todir="${TestVM.SuiteInstaller.dir}"  overwrite="true" failonerror="false"/>
-		
-		<echo message="Checking the build copy process if successed"/>
-		<if>
-			<available file="${TestVM.SuiteInstaller.dir}\${FileServer.Build.Name}"/>
-			<then>
-				<property name="file.exists" value="true"/>
-				<echo message="Copy Suite Installer to local successfull!"/>
-			</then>
-			<else>
-				<fail message="Copy Suite Installer to local failure!"/>
-			</else>
-		</if>
-	</target>
 	
 	<!-- ================================================ -->
 	<target name="PrepareEnv">
@@ -186,26 +159,7 @@
 		<echo message="===================OracleClientOutput==========================" />
 		
 	</target>
-	
-	<!-- ================================================ -->
-	<target name="InstallSpaceManagerClient">
-		<echo message="FileServer.Build.Dir		: ${FileServer.Build.Dir}${VersionNumber}"/>
-		<echo message="FileServer.Build.Name	: ${FileServer.Build.Name}"/>
-		<echo message="ProductFamily			: ${ProductFamily}"/>
-		<echo message="Product Build in Local	: ${TestVM.SuiteInstaller.dir}"/>
 		
-		<condition property="file.exists" else="false">
-			<available file="${TestVM.SuiteInstaller.dir}\${FileServer.Build.Name}"/>
-		</condition>
-		<echo message="The Suite Installer in Local:${TestVM.SuiteInstaller.dir}\${FileServer.Build.Name}"/>
-		<echo message="if file existed in Local? : ${file.exists}"/>
-		
-		<property name="SuiteInstaller" location="${TestVM.SuiteInstaller.dir}\${FileServer.Build.Name}"/>
-		<echo message="Start to Launch Suite Installer......" />
-		<exec executable="${SuiteInstaller}" spawn="true"/>	
-		<echo message="Suite Installer have started......" />
-	</target>
-	
 	<!-- ===============Components Begin================= -->
 	<target name="TestExecute">
 	
