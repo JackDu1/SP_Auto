@@ -110,6 +110,26 @@
 				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
 				<Prp name="typename" type="S" value="Script Unit"/>
 			</Node>
+			<Node name="item0000000009">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="SpaceManager.sd"/>
+				</Node>
+				<Prp name="index" type="I" value="9"/>
+				<Prp name="key" type="S" value="{C360425E-3574-4DA7-A191-7522A1EDC2C6}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="item0000000010">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="OracleConnection.sd"/>
+				</Node>
+				<Prp name="index" type="I" value="10"/>
+				<Prp name="key" type="S" value="{8425B9A4-2259-48EE-A96B-EDB54E3C622B}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
 		</Node>
 		<Node name="folders">
 			<Node name="folders">
@@ -135,6 +155,10 @@
 						<Node name="ref0000000004">
 							<Prp name="index" type="I" value="4"/>
 							<Prp name="key" type="S" value="{D7FDB66D-4BF4-4FB5-B637-831CBD7C1118}"/>
+						</Node>
+						<Node name="ref0000000005">
+							<Prp name="index" type="I" value="5"/>
+							<Prp name="key" type="S" value="{8425B9A4-2259-48EE-A96B-EDB54E3C622B}"/>
 						</Node>
 					</Node>
 					<Prp name="caption" type="S" value="Common"/>
