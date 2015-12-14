@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Root Signature="{5DCBAC3B-D39C-497C-9BE8-744CBADD37AA}" NameMappingVersion="4" Cookie="109">
+<Root Signature="{5DCBAC3B-D39C-497C-9BE8-744CBADD37AA}" NameMappingVersion="4" Cookie="110">
 	<Nodes Name="NameMapping" Key="{BE401E45-B2D6-4FBA-931A-C2117D5C51AD}" ParallelWalk="True">
 		<Properties />
 		<Children>
@@ -375,7 +375,15 @@
 								<Properties>
 									<Property0 Name="NativeClrObject.Name" Cookie="108" />
 								</Properties>
-								<Children />
+								<Children>
+									<Child0 Name="OKBtn" Key="{2CD33DBC-5E50-4F5E-8AAE-A8791BAC1D09}" ParallelWalk="True">
+										<Properties>
+											<Property0 Name="NativeClrObject.Name" Cookie="109" />
+										</Properties>
+										<Children />
+										<TypeInfo Item0="18" />
+									</Child0>
+								</Children>
 								<TypeInfo Item0="13" />
 							</Child7>
 						</Children>
@@ -431,7 +439,9 @@
 			</Child4>
 			<Child5 Name="ConnectionErrorDialog" Owner="{2833149C-9DAB-4F6D-8A60-991674525949}" />
 			<Child6 Name="ConnectionSuccessWin" Owner="{A1061E78-65A4-4B8C-8B65-03149F518FA1}" />
-			<Child7 Name="ListDialog" Owner="{9C7632B8-C4D8-465A-B3E0-421F68392FD6}" />
+			<Child7 Name="ListDialog" Owner="{9C7632B8-C4D8-465A-B3E0-421F68392FD6}">
+				<Child0 Name="OKBtn" Owner="{2CD33DBC-5E50-4F5E-8AAE-A8791BAC1D09}" />
+			</Child7>
 		</Child0>
 	</LogicalNodes>
 	<Storages Current="0">
@@ -545,6 +555,7 @@
 			<Property106 Cookie="106" PropertyType="0" Value="#32770" Type="5" />
 			<Property107 Cookie="107" PropertyType="0" Value="Sys.Process(&apos;SpaceManager&apos;).Window(&apos;#32770&apos;, &apos;&apos;, 1)" Type="5" />
 			<Property108 Cookie="108" PropertyType="0" Value="ListDialog" Type="5" />
+			<Property109 Cookie="109" PropertyType="0" Value="okButton" Type="5" />
 		</Child0>
 	</Storages>
 	<TypeInfo StoreCodeCompletion="1">
