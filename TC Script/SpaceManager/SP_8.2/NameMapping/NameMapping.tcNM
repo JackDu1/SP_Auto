@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Root Signature="{5DCBAC3B-D39C-497C-9BE8-744CBADD37AA}" NameMappingVersion="4" Cookie="119">
+<Root Signature="{5DCBAC3B-D39C-497C-9BE8-744CBADD37AA}" NameMappingVersion="4" Cookie="122">
 	<Nodes Name="NameMapping" Key="{BE401E45-B2D6-4FBA-931A-C2117D5C51AD}" ParallelWalk="True">
 		<Properties />
 		<Children>
@@ -422,6 +422,22 @@
 						</Children>
 						<TypeInfo Item0="0" />
 					</Child0>
+					<Child1 Name="Cmd" Key="{6CF7C3E7-D63A-4E4F-920D-576329258255}" ParallelWalk="True">
+						<Properties>
+							<Property0 Name="ProcessName" Cookie="119" />
+						</Properties>
+						<Children>
+							<Child0 Name="CmdWindow" Key="{EE57E955-8052-48F8-8C03-AE6584EF45FD}" ParallelWalk="True">
+								<Properties>
+									<Property0 Name="WndClass" Cookie="120" />
+									<Property1 Name="WndCaption" Cookie="121" />
+								</Properties>
+								<Children />
+								<TypeInfo Item0="27" />
+							</Child0>
+						</Children>
+						<TypeInfo Item0="12" />
+					</Child1>
 				</Children>
 			</Child0>
 		</Children>
@@ -482,6 +498,9 @@
 				<Child0 Name="OKBtn" Owner="{1FCA3F5F-99D3-427C-84B9-34781E167BEA}" />
 			</Child9>
 		</Child0>
+		<Child1 Name="Cmd" Owner="{6CF7C3E7-D63A-4E4F-920D-576329258255}">
+			<Child0 Name="CmdWindow" Owner="{EE57E955-8052-48F8-8C03-AE6584EF45FD}" />
+		</Child1>
 	</LogicalNodes>
 	<Storages Current="0">
 		<Child0 Name="Default Configuration">
@@ -603,6 +622,9 @@
 			<Property115 Cookie="116" PropertyType="0" Value="ListDialog" Type="5" />
 			<Property116 Cookie="117" PropertyType="0" Value="Missing Objects" Type="5" />
 			<Property117 Cookie="118" PropertyType="0" Value="okButton" Type="5" />
+			<Property118 Cookie="119" PropertyType="0" Value="cmd" Type="5" />
+			<Property119 Cookie="120" PropertyType="0" Value="ConsoleWindowClass" Type="5" />
+			<Property120 Cookie="121" PropertyType="0" Value="*" Type="5" />
 		</Child0>
 	</Storages>
 	<TypeInfo StoreCodeCompletion="1">
