@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Root Signature="{5DCBAC3B-D39C-497C-9BE8-744CBADD37AA}" NameMappingVersion="4" Cookie="124">
+<Root Signature="{5DCBAC3B-D39C-497C-9BE8-744CBADD37AA}" NameMappingVersion="4" Cookie="147">
 	<Nodes Name="NameMapping" Key="{BE401E45-B2D6-4FBA-931A-C2117D5C51AD}" ParallelWalk="True">
 		<Properties />
 		<Children>
@@ -83,8 +83,8 @@
 											</Child0>
 											<Child1 Name="LiveReorgPage" Key="{FE944E87-2D50-42B3-BA1C-403ADCBB6EB4}" ParallelWalk="True">
 												<Properties>
-													<Property0 Name="ClrFullClassName" Cookie="84" />
-													<Property1 Name="WndCaption" Cookie="85" />
+													<Property0 Name="ClrFullClassName" Cookie="136" />
+													<Property1 Name="Index" Cookie="137" />
 												</Properties>
 												<Children>
 													<Child0 Name="ViewContainer" Key="{36D95139-B83E-4FBB-874B-A03FD8EE8684}" ParallelWalk="True">
@@ -151,6 +151,37 @@
 																		</Children>
 																		<TypeInfo Item0="15" />
 																	</Child0>
+																	<Child1 Name="StandardReorgControl" Key="{EFC73F30-295A-465A-8AF8-0C03A75759D3}" ParallelWalk="True">
+																		<Properties>
+																			<Property0 Name="NativeClrObject.Name" Cookie="143" />
+																		</Properties>
+																		<Children>
+																			<Child0 Name="wizardPanel" Key="{43A6BF5D-EB06-400C-8D51-46958385D339}" ParallelWalk="True">
+																				<Properties>
+																					<Property0 Name="NativeClrObject.Name" Cookie="144" />
+																				</Properties>
+																				<Children>
+																					<Child0 Name="ScheduleExecutionControl" Key="{0692B18B-5661-4105-913E-DB64917A78BA}" ParallelWalk="True">
+																						<Properties>
+																							<Property0 Name="NativeClrObject.Name" Cookie="145" />
+																						</Properties>
+																						<Children>
+																							<Child0 Name="ScheduleButton" Key="{8ABE5677-CE92-41A5-ACC3-E3CB04B37893}" ParallelWalk="True">
+																								<Properties>
+																									<Property0 Name="NativeClrObject.Name" Cookie="146" />
+																								</Properties>
+																								<Children />
+																								<TypeInfo Item0="18" />
+																							</Child0>
+																						</Children>
+																						<TypeInfo Item0="15" />
+																					</Child0>
+																				</Children>
+																				<TypeInfo Item0="15" />
+																			</Child0>
+																		</Children>
+																		<TypeInfo Item0="15" />
+																	</Child1>
 																</Children>
 																<TypeInfo Item0="15" />
 															</Child0>
@@ -460,6 +491,11 @@
 						<Child1 Name="ScheduleExecutionControl" Owner="{7CBC8DFB-5EE5-4237-9B12-03ACCFF70537}">
 							<Child0 Name="ScheduleButton" Owner="{665B0CB5-09F4-4989-B7D7-E97A1314BCD1}" />
 						</Child1>
+						<Child2 Name="StandardReorgControl" Owner="{EFC73F30-295A-465A-8AF8-0C03A75759D3}">
+							<Child0 Name="ScheduleExecutionControl" Owner="{0692B18B-5661-4105-913E-DB64917A78BA}">
+								<Child0 Name="ScheduleButton" Owner="{8ABE5677-CE92-41A5-ACC3-E3CB04B37893}" />
+							</Child0>
+						</Child2>
 					</Child1>
 				</Child1>
 			</Child0>
@@ -589,44 +625,61 @@
 			<Property81 Cookie="81" PropertyType="0" Value="ComboBoxEx32" Type="5" />
 			<Property82 Cookie="82" PropertyType="0" Value="Button" Type="5" />
 			<Property83 Cookie="83" PropertyType="0" Value="&amp;Open" Type="5" />
-			<Property84 Cookie="84" PropertyType="0" Value="DevExpress.XtraTab.XtraTabPage" Type="5" />
-			<Property85 Cookie="85" PropertyType="0" Value="LiveReorg" Type="5" />
-			<Property86 Cookie="86" PropertyType="0" Value="ViewContainer" Type="5" />
-			<Property87 Cookie="87" PropertyType="0" Value="panel" Type="5" />
-			<Property88 Cookie="88" PropertyType="0" Value="LiveReorgControl" Type="5" />
-			<Property89 Cookie="89" PropertyType="0" Value="wizardPanel" Type="5" />
-			<Property90 Cookie="90" PropertyType="0" Value="scheduleMethodControl" Type="5" />
-			<Property91 Cookie="91" PropertyType="0" Value="methodPanel" Type="5" />
-			<Property92 Cookie="92" PropertyType="0" Value="execPanel" Type="5" />
-			<Property93 Cookie="93" PropertyType="0" Value="methodPanel" Type="5" />
-			<Property94 Cookie="94" PropertyType="0" Value="execPanel" Type="5" />
-			<Property95 Cookie="95" PropertyType="0" Value="scheduleExecutionControl" Type="5" />
-			<Property96 Cookie="96" PropertyType="0" Value="scheduleButton" Type="5" />
-			<Property97 Cookie="97" PropertyType="0" Value="#32770" Type="5" />
-			<Property98 Cookie="98" PropertyType="0" Value="Reorg Manager" Type="5" />
-			<Property99 Cookie="99" PropertyType="0" Value="Button" Type="5" />
-			<Property100 Cookie="100" PropertyType="0" Value="&amp;No" Type="5" />
-			<Property101 Cookie="101" PropertyType="0" Value="#32770" Type="5" />
-			<Property102 Cookie="102" PropertyType="0" Value="Group Name Exists" Type="5" />
-			<Property103 Cookie="103" PropertyType="0" Value="Button" Type="5" />
-			<Property104 Cookie="104" PropertyType="0" Value="OK" Type="5" />
-			<Property105 Cookie="105" PropertyType="0" Value="LargeErrorDialog" Type="5" />
-			<Property106 Cookie="106" PropertyType="0" Value="#32770" Type="5" />
-			<Property107 Cookie="107" PropertyType="0" Value="Sys.Process(&apos;SpaceManager&apos;).Window(&apos;#32770&apos;, &apos;&apos;, 1)" Type="5" />
-			<Property108 Cookie="109" PropertyType="0" Value="okButton" Type="5" />
-			<Property109 Cookie="110" PropertyType="0" Value="ListDialog" Type="5" />
-			<Property110 Cookie="111" PropertyType="0" Value="Materialized View&#32;&#32;Logs" Type="5" />
-			<Property111 Cookie="112" PropertyType="0" Value="yesButton" Type="5" />
-			<Property112 Cookie="113" PropertyType="0" Value="ListDialog" Type="5" />
-			<Property113 Cookie="114" PropertyType="0" Value="Rebuilt Global Indexes" Type="5" />
-			<Property114 Cookie="115" PropertyType="0" Value="okButton" Type="5" />
-			<Property115 Cookie="116" PropertyType="0" Value="ListDialog" Type="5" />
-			<Property116 Cookie="117" PropertyType="0" Value="Missing Objects" Type="5" />
-			<Property117 Cookie="118" PropertyType="0" Value="okButton" Type="5" />
-			<Property118 Cookie="120" PropertyType="0" Value="ConsoleWindowClass" Type="5" />
-			<Property119 Cookie="121" PropertyType="0" Value="*" Type="5" />
-			<Property120 Cookie="122" PropertyType="0" Value="cmd" Type="5" />
-			<Property121 Cookie="123" PropertyType="0" Value="2" Type="0" />
+			<Property84 Cookie="86" PropertyType="0" Value="ViewContainer" Type="5" />
+			<Property85 Cookie="87" PropertyType="0" Value="panel" Type="5" />
+			<Property86 Cookie="88" PropertyType="0" Value="LiveReorgControl" Type="5" />
+			<Property87 Cookie="89" PropertyType="0" Value="wizardPanel" Type="5" />
+			<Property88 Cookie="90" PropertyType="0" Value="scheduleMethodControl" Type="5" />
+			<Property89 Cookie="91" PropertyType="0" Value="methodPanel" Type="5" />
+			<Property90 Cookie="92" PropertyType="0" Value="execPanel" Type="5" />
+			<Property91 Cookie="93" PropertyType="0" Value="methodPanel" Type="5" />
+			<Property92 Cookie="94" PropertyType="0" Value="execPanel" Type="5" />
+			<Property93 Cookie="95" PropertyType="0" Value="scheduleExecutionControl" Type="5" />
+			<Property94 Cookie="96" PropertyType="0" Value="scheduleButton" Type="5" />
+			<Property95 Cookie="97" PropertyType="0" Value="#32770" Type="5" />
+			<Property96 Cookie="98" PropertyType="0" Value="Reorg Manager" Type="5" />
+			<Property97 Cookie="99" PropertyType="0" Value="Button" Type="5" />
+			<Property98 Cookie="100" PropertyType="0" Value="&amp;No" Type="5" />
+			<Property99 Cookie="101" PropertyType="0" Value="#32770" Type="5" />
+			<Property100 Cookie="102" PropertyType="0" Value="Group Name Exists" Type="5" />
+			<Property101 Cookie="103" PropertyType="0" Value="Button" Type="5" />
+			<Property102 Cookie="104" PropertyType="0" Value="OK" Type="5" />
+			<Property103 Cookie="105" PropertyType="0" Value="LargeErrorDialog" Type="5" />
+			<Property104 Cookie="106" PropertyType="0" Value="#32770" Type="5" />
+			<Property105 Cookie="107" PropertyType="0" Value="Sys.Process(&apos;SpaceManager&apos;).Window(&apos;#32770&apos;, &apos;&apos;, 1)" Type="5" />
+			<Property106 Cookie="109" PropertyType="0" Value="okButton" Type="5" />
+			<Property107 Cookie="110" PropertyType="0" Value="ListDialog" Type="5" />
+			<Property108 Cookie="111" PropertyType="0" Value="Materialized View&#32;&#32;Logs" Type="5" />
+			<Property109 Cookie="112" PropertyType="0" Value="yesButton" Type="5" />
+			<Property110 Cookie="113" PropertyType="0" Value="ListDialog" Type="5" />
+			<Property111 Cookie="114" PropertyType="0" Value="Rebuilt Global Indexes" Type="5" />
+			<Property112 Cookie="115" PropertyType="0" Value="okButton" Type="5" />
+			<Property113 Cookie="116" PropertyType="0" Value="ListDialog" Type="5" />
+			<Property114 Cookie="117" PropertyType="0" Value="Missing Objects" Type="5" />
+			<Property115 Cookie="118" PropertyType="0" Value="okButton" Type="5" />
+			<Property116 Cookie="120" PropertyType="0" Value="ConsoleWindowClass" Type="5" />
+			<Property117 Cookie="121" PropertyType="0" Value="*" Type="5" />
+			<Property118 Cookie="122" PropertyType="0" Value="cmd" Type="5" />
+			<Property119 Cookie="123" PropertyType="0" Value="2" Type="0" />
+			<Property120 Cookie="128" PropertyType="0" Value="DevExpress.XtraTab.XtraTabPage" Type="5" />
+			<Property121 Cookie="129" PropertyType="0" Value="Reorganize" Type="5" />
+			<Property122 Cookie="130" PropertyType="0" Value="ViewContainer" Type="5" />
+			<Property123 Cookie="131" PropertyType="0" Value="panel" Type="5" />
+			<Property124 Cookie="132" PropertyType="0" Value="StandardReorgControl" Type="5" />
+			<Property125 Cookie="133" PropertyType="0" Value="wizardPanel" Type="5" />
+			<Property126 Cookie="134" PropertyType="0" Value="scheduleExecutionControl" Type="5" />
+			<Property127 Cookie="135" PropertyType="0" Value="scheduleButton" Type="5" />
+			<Property128 Cookie="136" PropertyType="0" Value="DevExpress.XtraTab.XtraTabPage" Type="5" />
+			<Property129 Cookie="137" PropertyType="0" Value="2" Type="0" />
+			<Property130 Cookie="138" PropertyType="0" Value="StandardReorgControl" Type="5" />
+			<Property131 Cookie="139" PropertyType="0" Value="StandardReorgControl" Type="5" />
+			<Property132 Cookie="140" PropertyType="0" Value="wizardPanel" Type="5" />
+			<Property133 Cookie="141" PropertyType="0" Value="scheduleExecutionControl" Type="5" />
+			<Property134 Cookie="142" PropertyType="0" Value="scheduleButton" Type="5" />
+			<Property135 Cookie="143" PropertyType="0" Value="StandardReorgControl" Type="5" />
+			<Property136 Cookie="144" PropertyType="0" Value="wizardPanel" Type="5" />
+			<Property137 Cookie="145" PropertyType="0" Value="scheduleExecutionControl" Type="5" />
+			<Property138 Cookie="146" PropertyType="0" Value="scheduleButton" Type="5" />
 		</Child0>
 	</Storages>
 	<TypeInfo StoreCodeCompletion="1">
