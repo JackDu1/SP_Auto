@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Root Signature="{5DCBAC3B-D39C-497C-9BE8-744CBADD37AA}" NameMappingVersion="4" Cookie="147">
+<Root Signature="{5DCBAC3B-D39C-497C-9BE8-744CBADD37AA}" NameMappingVersion="4" Cookie="148">
 	<Nodes Name="NameMapping" Key="{BE401E45-B2D6-4FBA-931A-C2117D5C51AD}" ParallelWalk="True">
 		<Properties />
 		<Children>
@@ -391,7 +391,15 @@
 								<Properties>
 									<Property0 Name="NativeClrObject.Name" Cookie="105" />
 								</Properties>
-								<Children />
+								<Children>
+									<Child0 Name="OKBtn" Key="{0389D232-112B-432F-8E8E-584CBA7F04B4}" ParallelWalk="True">
+										<Properties>
+											<Property0 Name="NativeClrObject.Name" Cookie="147" />
+										</Properties>
+										<Children />
+										<TypeInfo Item0="18" />
+									</Child0>
+								</Children>
 								<TypeInfo Item0="13" />
 							</Child5>
 							<Child6 Name="ConnectionSuccessWin" Key="{A1061E78-65A4-4B8C-8B65-03149F518FA1}" ParallelWalk="True">
@@ -523,7 +531,9 @@
 			<Child4 Name="GroupNameExistsWin" Owner="{6D342438-6FC3-4734-B95B-E38AECAA9131}">
 				<Child0 Name="OKBtn" Owner="{6311FE6D-1C04-4F46-8D89-CB9C09B596B1}" />
 			</Child4>
-			<Child5 Name="ConnectionErrorDialog" Owner="{2833149C-9DAB-4F6D-8A60-991674525949}" />
+			<Child5 Name="ConnectionErrorDialog" Owner="{2833149C-9DAB-4F6D-8A60-991674525949}">
+				<Child0 Name="OKBtn" Owner="{0389D232-112B-432F-8E8E-584CBA7F04B4}" />
+			</Child5>
 			<Child6 Name="ConnectionSuccessWin" Owner="{A1061E78-65A4-4B8C-8B65-03149F518FA1}" />
 			<Child7 Name="MaterializedViewLogs" Owner="{9C7632B8-C4D8-465A-B3E0-421F68392FD6}">
 				<Child0 Name="YesBtn" Owner="{260CC63E-1FEA-41E0-8EAD-6D29DFC29888}" />
@@ -680,6 +690,7 @@
 			<Property136 Cookie="144" PropertyType="0" Value="wizardPanel" Type="5" />
 			<Property137 Cookie="145" PropertyType="0" Value="scheduleExecutionControl" Type="5" />
 			<Property138 Cookie="146" PropertyType="0" Value="scheduleButton" Type="5" />
+			<Property139 Cookie="147" PropertyType="0" Value="okButton" Type="5" />
 		</Child0>
 	</Storages>
 	<TypeInfo StoreCodeCompletion="1">
