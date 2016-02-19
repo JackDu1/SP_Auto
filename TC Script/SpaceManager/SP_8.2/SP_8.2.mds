@@ -475,7 +475,7 @@
 			</Node>
 			<Node name="{c3267834-69e4-4cd8-b16a-b60a9bb8a3b4}">
 				<Prp name="type" type="I" value="1"/>
-				<Prp name="value" type="B" value="0"/>
+				<Prp name="value" type="B" value="-1"/>
 			</Node>
 			<Node name="{c32b04f8-59f6-4f95-8e50-12818e0decc7}">
 				<Prp name="col0enabled" type="B" value="-1"/>
