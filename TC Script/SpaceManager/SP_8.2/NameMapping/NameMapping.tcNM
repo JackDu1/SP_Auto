@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Root Signature="{5DCBAC3B-D39C-497C-9BE8-744CBADD37AA}" NameMappingVersion="4" Cookie="148">
+<Root Signature="{5DCBAC3B-D39C-497C-9BE8-744CBADD37AA}" NameMappingVersion="4" Cookie="152">
 	<Nodes Name="NameMapping" Key="{BE401E45-B2D6-4FBA-931A-C2117D5C51AD}" ParallelWalk="True">
 		<Properties />
 		<Children>
@@ -142,6 +142,22 @@
 																								<Children />
 																								<TypeInfo Item0="18" />
 																							</Child0>
+																							<Child1 Name="ViewScriptButton" Key="{1BC407E6-E4BE-4B70-BAFC-7DB9B82990E7}" ParallelWalk="True">
+																								<Properties>
+																									<Property0 Name="NativeClrObject.Name" Cookie="148" />
+																									<Property1 Name="WndCaption" Cookie="149" />
+																								</Properties>
+																								<Children />
+																								<TypeInfo Item0="18" />
+																							</Child1>
+																							<Child2 Name="ExecImmediateBtn" Key="{CE69DE53-4722-4150-A7A1-9EA18CEE2839}" ParallelWalk="True">
+																								<Properties>
+																									<Property0 Name="NativeClrObject.Name" Cookie="150" />
+																									<Property1 Name="WndCaption" Cookie="151" />
+																								</Properties>
+																								<Children />
+																								<TypeInfo Item0="18" />
+																							</Child2>
 																						</Children>
 																						<TypeInfo Item0="15" />
 																					</Child1>
@@ -498,6 +514,8 @@
 						</Child0>
 						<Child1 Name="ScheduleExecutionControl" Owner="{7CBC8DFB-5EE5-4237-9B12-03ACCFF70537}">
 							<Child0 Name="ScheduleButton" Owner="{665B0CB5-09F4-4989-B7D7-E97A1314BCD1}" />
+							<Child1 Name="ViewScriptButton" Owner="{1BC407E6-E4BE-4B70-BAFC-7DB9B82990E7}" />
+							<Child2 Name="ExecImmediateBtn" Owner="{CE69DE53-4722-4150-A7A1-9EA18CEE2839}" />
 						</Child1>
 						<Child2 Name="StandardReorgControl" Owner="{EFC73F30-295A-465A-8AF8-0C03A75759D3}">
 							<Child0 Name="ScheduleExecutionControl" Owner="{0692B18B-5661-4105-913E-DB64917A78BA}">
@@ -691,6 +709,10 @@
 			<Property137 Cookie="145" PropertyType="0" Value="scheduleExecutionControl" Type="5" />
 			<Property138 Cookie="146" PropertyType="0" Value="scheduleButton" Type="5" />
 			<Property139 Cookie="147" PropertyType="0" Value="okButton" Type="5" />
+			<Property140 Cookie="148" PropertyType="0" Value="viewScriptButton" Type="5" />
+			<Property141 Cookie="149" PropertyType="0" Value="View in Editor" Type="5" />
+			<Property142 Cookie="150" PropertyType="0" Value="execImmediateButton" Type="5" />
+			<Property143 Cookie="151" PropertyType="0" Value="Execute immediately" Type="5" />
 		</Child0>
 	</Storages>
 	<TypeInfo StoreCodeCompletion="1">
