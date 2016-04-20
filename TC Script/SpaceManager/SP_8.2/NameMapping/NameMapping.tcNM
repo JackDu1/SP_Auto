@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Root Signature="{5DCBAC3B-D39C-497C-9BE8-744CBADD37AA}" NameMappingVersion="4" Cookie="152">
+<Root Signature="{5DCBAC3B-D39C-497C-9BE8-744CBADD37AA}" NameMappingVersion="4" Cookie="154">
 	<Nodes Name="NameMapping" Key="{BE401E45-B2D6-4FBA-931A-C2117D5C51AD}" ParallelWalk="True">
 		<Properties />
 		<Children>
@@ -158,6 +158,13 @@
 																								<Children />
 																								<TypeInfo Item0="18" />
 																							</Child2>
+																							<Child3 Name="SubmitButton" Key="{9FBD83BD-EF18-4A7A-9886-D9362BDF73C2}" ParallelWalk="True">
+																								<Properties>
+																									<Property0 Name="NativeClrObject.Name" Cookie="152" />
+																								</Properties>
+																								<Children />
+																								<TypeInfo Item0="18" />
+																							</Child3>
 																						</Children>
 																						<TypeInfo Item0="15" />
 																					</Child1>
@@ -189,6 +196,13 @@
 																								<Children />
 																								<TypeInfo Item0="18" />
 																							</Child0>
+																							<Child1 Name="SubmitButton" Key="{68ABB0A2-9AC1-4BDD-AB69-3F2F253C983E}" ParallelWalk="True">
+																								<Properties>
+																									<Property0 Name="Name" Cookie="153" />
+																								</Properties>
+																								<Children />
+																								<TypeInfo Item0="18" />
+																							</Child1>
 																						</Children>
 																						<TypeInfo Item0="15" />
 																					</Child0>
@@ -516,10 +530,12 @@
 							<Child0 Name="ScheduleButton" Owner="{665B0CB5-09F4-4989-B7D7-E97A1314BCD1}" />
 							<Child1 Name="ViewScriptButton" Owner="{1BC407E6-E4BE-4B70-BAFC-7DB9B82990E7}" />
 							<Child2 Name="ExecImmediateBtn" Owner="{CE69DE53-4722-4150-A7A1-9EA18CEE2839}" />
+							<Child3 Name="SubmitButton" Owner="{9FBD83BD-EF18-4A7A-9886-D9362BDF73C2}" />
 						</Child1>
 						<Child2 Name="StandardReorgControl" Owner="{EFC73F30-295A-465A-8AF8-0C03A75759D3}">
 							<Child0 Name="ScheduleExecutionControl" Owner="{0692B18B-5661-4105-913E-DB64917A78BA}">
 								<Child0 Name="ScheduleButton" Owner="{8ABE5677-CE92-41A5-ACC3-E3CB04B37893}" />
+								<Child1 Name="SubmitButton" Owner="{68ABB0A2-9AC1-4BDD-AB69-3F2F253C983E}" />
 							</Child0>
 						</Child2>
 					</Child1>
@@ -713,6 +729,8 @@
 			<Property141 Cookie="149" PropertyType="0" Value="View in Editor" Type="5" />
 			<Property142 Cookie="150" PropertyType="0" Value="execImmediateButton" Type="5" />
 			<Property143 Cookie="151" PropertyType="0" Value="Execute immediately" Type="5" />
+			<Property144 Cookie="152" PropertyType="0" Value="submitButton" Type="5" />
+			<Property145 Cookie="153" PropertyType="0" Value="WinFormsObject(&apos;submitButton&apos;)" Type="5" />
 		</Child0>
 	</Storages>
 	<TypeInfo StoreCodeCompletion="1">
