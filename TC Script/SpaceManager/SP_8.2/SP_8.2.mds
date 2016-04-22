@@ -1089,7 +1089,7 @@
 							<Prp name="group" type="B" value="-1"/>
 							<Prp name="index" type="I" value="0"/>
 							<Prp name="key" type="S" value="{68A67D74-203C-496D-AC44-B9C3796B98AC}"/>
-							<Prp name="name" type="S" value="W1 - NormalTable"/>
+							<Prp name="name" type="S" value="W1 - From1to50"/>
 							<Prp name="stoponerror" type="I" value="2"/>
 							<Prp name="stoponexception" type="I" value="2"/>
 							<Prp name="test moniker" type="S" value=""/>
@@ -1120,7 +1120,7 @@
 							<Prp name="group" type="B" value="-1"/>
 							<Prp name="index" type="I" value="1"/>
 							<Prp name="key" type="S" value="{DFF70E0B-61C1-45DC-80D3-472011AE1269}"/>
-							<Prp name="name" type="S" value="W1 - From11to20"/>
+							<Prp name="name" type="S" value="W1 - From51to100"/>
 							<Prp name="stoponerror" type="I" value="2"/>
 							<Prp name="stoponexception" type="I" value="2"/>
 							<Prp name="test moniker" type="S" value=""/>
@@ -1151,7 +1151,7 @@
 							<Prp name="group" type="B" value="-1"/>
 							<Prp name="index" type="I" value="2"/>
 							<Prp name="key" type="S" value="{E366368C-58FC-4B38-96B6-4CBD18EC0786}"/>
-							<Prp name="name" type="S" value="W1 - From21to30"/>
+							<Prp name="name" type="S" value="W1 - From101to150"/>
 							<Prp name="stoponerror" type="I" value="2"/>
 							<Prp name="stoponexception" type="I" value="2"/>
 							<Prp name="test moniker" type="S" value=""/>
