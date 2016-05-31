@@ -178,7 +178,7 @@
 				<Prp name="col1enabled" type="B" value="-1"/>
 				<Prp name="col1type" type="I" value="5"/>
 				<Prp name="colcount" type="I" value="2"/>
-				<Prp name="colindex" type="I" value="1"/>
+				<Prp name="colindex" type="I" value="0"/>
 				<Prp name="rowcount" type="I" value="1"/>
 				<Prp name="rowindex" type="I" value="0"/>
 				<Prp name="type" type="I" value="6"/>
@@ -278,13 +278,14 @@
 				<Prp name="col1type" type="I" value="5"/>
 				<Prp name="colcount" type="I" value="2"/>
 				<Prp name="colindex" type="I" value="0"/>
-				<Prp name="rowcount" type="I" value="12"/>
-				<Prp name="rowindex" type="I" value="6"/>
+				<Prp name="rowcount" type="I" value="13"/>
+				<Prp name="rowindex" type="I" value="12"/>
 				<Prp name="type" type="I" value="6"/>
 				<Prp name="val0x0" type="B" value="0"/>
 				<Prp name="val0x1" type="B" value="-1"/>
 				<Prp name="val0x10" type="B" value="-1"/>
 				<Prp name="val0x11" type="B" value="-1"/>
+				<Prp name="val0x12" type="B" value="-1"/>
 				<Prp name="val0x2" type="B" value="-1"/>
 				<Prp name="val0x3" type="B" value="-1"/>
 				<Prp name="val0x4" type="B" value="-1"/>
@@ -297,6 +298,7 @@
 				<Prp name="val1x1" type="S" value="MsoCommandBar*"/>
 				<Prp name="val1x10" type="S" value="XTPReport"/>
 				<Prp name="val1x11" type="S" value="XTPPopupBar"/>
+				<Prp name="val1x12" type="S" value="PicturePanel"/>
 				<Prp name="val1x2" type="S" value="_Ww*"/>
 				<Prp name="val1x3" type="S" value="OpusApp"/>
 				<Prp name="val1x4" type="S" value="Vfp*"/>
@@ -1089,7 +1091,7 @@
 							<Prp name="group" type="B" value="-1"/>
 							<Prp name="index" type="I" value="0"/>
 							<Prp name="key" type="S" value="{68A67D74-203C-496D-AC44-B9C3796B98AC}"/>
-							<Prp name="name" type="S" value="W1 - From1to50"/>
+							<Prp name="name" type="S" value="W1 - From1to40"/>
 							<Prp name="stoponerror" type="I" value="2"/>
 							<Prp name="stoponexception" type="I" value="2"/>
 							<Prp name="test moniker" type="S" value=""/>
@@ -1120,7 +1122,7 @@
 							<Prp name="group" type="B" value="-1"/>
 							<Prp name="index" type="I" value="1"/>
 							<Prp name="key" type="S" value="{DFF70E0B-61C1-45DC-80D3-472011AE1269}"/>
-							<Prp name="name" type="S" value="W1 - From51to100"/>
+							<Prp name="name" type="S" value="W1 - From41to80"/>
 							<Prp name="stoponerror" type="I" value="2"/>
 							<Prp name="stoponexception" type="I" value="2"/>
 							<Prp name="test moniker" type="S" value=""/>
@@ -1151,7 +1153,69 @@
 							<Prp name="group" type="B" value="-1"/>
 							<Prp name="index" type="I" value="2"/>
 							<Prp name="key" type="S" value="{E366368C-58FC-4B38-96B6-4CBD18EC0786}"/>
-							<Prp name="name" type="S" value="W1 - From101to150"/>
+							<Prp name="name" type="S" value="W1 - From81to120"/>
+							<Prp name="stoponerror" type="I" value="2"/>
+							<Prp name="stoponexception" type="I" value="2"/>
+							<Prp name="test moniker" type="S" value=""/>
+							<Prp name="timeout" type="I" value="0"/>
+						</Node>
+						<Node name="item0000000003">
+							<Node name="child list">
+								<Node name="item0000000000">
+									<Node name="child list"/>
+									<Node name="test parameters"/>
+									<Prp name="count" type="I" value="1"/>
+									<Prp name="description" type="S" value=""/>
+									<Prp name="enabled" type="B" value="0"/>
+									<Prp name="group" type="B" value="0"/>
+									<Prp name="index" type="I" value="0"/>
+									<Prp name="key" type="S" value="{B0ECC232-BC8D-4CC7-9A06-E2E8090598C3}"/>
+									<Prp name="name" type="S" value="W1TestItem"/>
+									<Prp name="stoponerror" type="I" value="2"/>
+									<Prp name="stoponexception" type="I" value="2"/>
+									<Prp name="test moniker" type="S" value="{C07A1FAD-7A11-429A-A1F7-6EC5082DD152}Main"/>
+									<Prp name="timeout" type="I" value="0"/>
+								</Node>
+							</Node>
+							<Node name="test parameters"/>
+							<Prp name="count" type="I" value="1"/>
+							<Prp name="description" type="S" value=""/>
+							<Prp name="enabled" type="B" value="0"/>
+							<Prp name="group" type="B" value="-1"/>
+							<Prp name="index" type="I" value="3"/>
+							<Prp name="key" type="S" value="{E93156D7-37B0-4105-8B5A-7380CB167706}"/>
+							<Prp name="name" type="S" value="W1 - From121to160"/>
+							<Prp name="stoponerror" type="I" value="2"/>
+							<Prp name="stoponexception" type="I" value="2"/>
+							<Prp name="test moniker" type="S" value=""/>
+							<Prp name="timeout" type="I" value="0"/>
+						</Node>
+						<Node name="item0000000004">
+							<Node name="child list">
+								<Node name="item0000000000">
+									<Node name="child list"/>
+									<Node name="test parameters"/>
+									<Prp name="count" type="I" value="1"/>
+									<Prp name="description" type="S" value=""/>
+									<Prp name="enabled" type="B" value="0"/>
+									<Prp name="group" type="B" value="0"/>
+									<Prp name="index" type="I" value="0"/>
+									<Prp name="key" type="S" value="{AF24BF06-3508-4272-A7FE-4FE51192C63E}"/>
+									<Prp name="name" type="S" value="W1TestItem"/>
+									<Prp name="stoponerror" type="I" value="2"/>
+									<Prp name="stoponexception" type="I" value="2"/>
+									<Prp name="test moniker" type="S" value="{C07A1FAD-7A11-429A-A1F7-6EC5082DD152}Main"/>
+									<Prp name="timeout" type="I" value="0"/>
+								</Node>
+							</Node>
+							<Node name="test parameters"/>
+							<Prp name="count" type="I" value="1"/>
+							<Prp name="description" type="S" value=""/>
+							<Prp name="enabled" type="B" value="0"/>
+							<Prp name="group" type="B" value="-1"/>
+							<Prp name="index" type="I" value="4"/>
+							<Prp name="key" type="S" value="{DD733C1A-A6D0-435F-9ECE-8391540700CB}"/>
+							<Prp name="name" type="S" value="W1 - From161to181"/>
 							<Prp name="stoponerror" type="I" value="2"/>
 							<Prp name="stoponexception" type="I" value="2"/>
 							<Prp name="test moniker" type="S" value=""/>
