@@ -77,9 +77,6 @@
 			<Node name="script\connection.sd">
 				<Prp name="relpath" type="S" value="Script\Connection.sd"/>
 			</Node>
-			<Node name="script\livereorg.sd">
-				<Prp name="relpath" type="S" value="Script\LiveReorg.sd"/>
-			</Node>
 			<Node name="script\logfile.sd">
 				<Prp name="relpath" type="S" value="Script\LogFile.sd"/>
 			</Node>
@@ -97,9 +94,6 @@
 			</Node>
 			<Node name="script\sqlserver.sd">
 				<Prp name="relpath" type="S" value="Script\SQLServer.sd"/>
-			</Node>
-			<Node name="script\standreorg.sd">
-				<Prp name="relpath" type="S" value="Script\StandReorg.sd"/>
 			</Node>
 			<Node name="script\txtfile.sd">
 				<Prp name="relpath" type="S" value="Script\TXTFile.sd"/>
