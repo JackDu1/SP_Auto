@@ -1428,7 +1428,7 @@
 							<Prp name="group" type="B" value="-1"/>
 							<Prp name="index" type="I" value="0"/>
 							<Prp name="key" type="S" value="{4764649E-2776-4C8F-8372-AFCE3A32B1DD}"/>
-							<Prp name="name" type="S" value="W5 - SmokeTestLive&#xA;"/>
+							<Prp name="name" type="S" value="W5 - SmokeTestLive"/>
 							<Prp name="stoponerror" type="I" value="2"/>
 							<Prp name="stoponexception" type="I" value="2"/>
 							<Prp name="test moniker" type="S" value=""/>
@@ -1475,7 +1475,7 @@
 							<Prp name="group" type="B" value="-1"/>
 							<Prp name="index" type="I" value="0"/>
 							<Prp name="key" type="S" value="{ACF1C415-1AC8-4CCD-981D-C8CC61F68EC6}"/>
-							<Prp name="name" type="S" value="W6 - SmokeTestStandard&#xA;"/>
+							<Prp name="name" type="S" value="W6 - SmokeTestStandard"/>
 							<Prp name="stoponerror" type="I" value="2"/>
 							<Prp name="stoponexception" type="I" value="2"/>
 							<Prp name="test moniker" type="S" value=""/>
