@@ -62,8 +62,8 @@
 	
 	<!-- ================================================ -->
 	<target name="GetLicenseStatus">
-		<property name="licenseStatusURL" value="http://10.5.0.1:1947/_int_/features.html"/>
-		<property name="licenseSessionURL" value="http://10.5.0.1:1947/_int_/sessions.html?haspid=266647369897&amp;featureid=1031"/>
+		<property name="licenseStatusURL" value="http://10.5.0.9:1947/_int_/features.html"/>
+		<property name="licenseSessionURL" value="http://10.5.0.9:1947/_int_/sessions.html?haspid=266647369897&amp;featureid=1031"/>
 		<property name="SwarmServiceStatusURL" value="http://jenkins.skytapbuilddb.local:15795/"/>
 		<script language="javascript" src="${TestVM.AntUtilities.dir}/LicenseStatus.js"/>
 	</target>
