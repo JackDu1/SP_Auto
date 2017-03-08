@@ -63,6 +63,16 @@
 				<Prp name="type" type="S" value="{9252F941-DB23-4FCA-AA50-858B33BB4A19}"/>
 				<Prp name="typename" type="S" value="Script"/>
 			</Node>
+			<Node name="item0000000004">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="NetworkSuite\NetworkSuite.tcNetSuite"/>
+				</Node>
+				<Prp name="index" type="I" value="4"/>
+				<Prp name="key" type="S" value="{BDD126D0-AEC3-4385-BB2B-8E1FA95B5DC6}"/>
+				<Prp name="pluginname" type="S" value="Network Suite"/>
+				<Prp name="type" type="S" value="{342AA317-C8C7-4232-8A60-069723AAFC67}"/>
+				<Prp name="typename" type="S" value="Network Suite"/>
+			</Node>
 		</Node>
 		<Node name="config">
 			<Prp name="language" type="S" value="{9E432E59-33EF-4EAA-95C6-63FC35AF69EE}"/>
@@ -71,11 +81,26 @@
 			<Node name="namemapping\namemapping.tcnm">
 				<Prp name="relpath" type="S" value="NameMapping\NameMapping.tcNM"/>
 			</Node>
+			<Node name="networksuite\hosts.tcnetsuitehosts">
+				<Prp name="relpath" type="S" value="NetworkSuite\Hosts.tcNetSuiteHosts"/>
+			</Node>
+			<Node name="networksuite\jobs.tcnetsuitejobs">
+				<Prp name="relpath" type="S" value="NetworkSuite\Jobs.tcNetSuiteJobs"/>
+			</Node>
+			<Node name="networksuite\networksuite.tcnetsuite">
+				<Prp name="relpath" type="S" value="NetworkSuite\NetworkSuite.tcNetSuite"/>
+			</Node>
+			<Node name="networksuite\synchpoints.tcnetsuitesynchpoints">
+				<Prp name="relpath" type="S" value="NetworkSuite\SynchPoints.tcNetSuiteSynchPoints"/>
+			</Node>
 			<Node name="script\commonfunction.sd">
 				<Prp name="relpath" type="S" value="Script\CommonFunction.sd"/>
 			</Node>
 			<Node name="script\connection.sd">
 				<Prp name="relpath" type="S" value="Script\Connection.sd"/>
+			</Node>
+			<Node name="script\livereorg.sd">
+				<Prp name="relpath" type="S" value="Script\LiveReorg.sd"/>
 			</Node>
 			<Node name="script\logfile.sd">
 				<Prp name="relpath" type="S" value="Script\LogFile.sd"/>
@@ -95,6 +120,9 @@
 			<Node name="script\sqlserver.sd">
 				<Prp name="relpath" type="S" value="Script\SQLServer.sd"/>
 			</Node>
+			<Node name="script\standreorg.sd">
+				<Prp name="relpath" type="S" value="Script\StandReorg.sd"/>
+			</Node>
 			<Node name="script\txtfile.sd">
 				<Prp name="relpath" type="S" value="Script\TXTFile.sd"/>
 			</Node>
@@ -112,7 +140,21 @@
 			</Node>
 		</Node>
 		<Node name="folders">
-			<Node name="folders"/>
+			<Node name="folders">
+				<Node name="folder0000000000">
+					<Node name="folders"/>
+					<Node name="references">
+						<Node name="ref0000000000">
+							<Prp name="index" type="I" value="0"/>
+							<Prp name="key" type="S" value="{BDD126D0-AEC3-4385-BB2B-8E1FA95B5DC6}"/>
+						</Node>
+					</Node>
+					<Prp name="caption" type="S" value="Advanced"/>
+					<Prp name="description" type="S" value="A logical folder that is used to organize project items and elements."/>
+					<Prp name="index" type="I" value="0"/>
+					<Prp name="moniker" type="S" value="{69583268-92F3-49FA-B573-C831F5ABC27B}"/>
+				</Node>
+			</Node>
 		</Node>
 		<Node name="issue tracking">
 			<Prp name="key" type="S" value="{580A7EBF-C35D-44C3-AA2B-ACD4CA495BEE}"/>
