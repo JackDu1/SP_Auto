@@ -9,6 +9,8 @@ sc stop hasplms
 
 echo [REMOTE] > "%HASP%\hasplm.ini"
 echo serveraddr=12.106.87.9 >> "%HASP%\hasplm.ini"
+echo aggressive=1 >> "%HASP%\hasplm.ini"
+echo broadcastsearch=0 >> "%HASP%\hasplm.ini"
 
 sc start hasplms
 :waitstart
