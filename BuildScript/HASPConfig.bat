@@ -8,7 +8,7 @@ sc stop hasplms
 	sc query hasplms |findstr "STOPPED" > nul || goto :waitstop
 
 echo [REMOTE] > "%HASP%\hasplm.ini"
-echo serveraddr=12.106.87.9 >> "%HASP%\hasplm.ini"
+echo serveraddr=10.1.145.11 >> "%HASP%\hasplm.ini"
 echo aggressive=1 >> "%HASP%\hasplm.ini"
 echo broadcastsearch=0 >> "%HASP%\hasplm.ini"
 
